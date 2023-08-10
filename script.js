@@ -11,6 +11,13 @@ const form_heading = document.querySelector(".form-heading");
 const nav_container = document.querySelector(".nav-container");
 const event_section = document.querySelector(".event");
 const usrname = document.getElementById("usrname");
+const comment_section = document.querySelector(".comment-section");
+const gallery_section = document.querySelector(".gallery-section");
+const colored_section = document.querySelector(".colored-section");
+const room_list = document.querySelector(".room-list");
+const lines = document.querySelectorAll("hr");
+// const room_list = document.querySelector(".room-list");
+// const lines = document.querySelectorAll(".line1 line2 line3");
 
 
 usrname.addEventListener("click", () => {
@@ -33,6 +40,13 @@ home.addEventListener("click", (event) => {
         form_heading.classList.toggle("hide2");
         form_section.classList.toggle("hide2");
         event_section.classList.toggle("hide2");
+        gallery_section.classList.toggle("hide2");
+        colored_section.classList.toggle("hide2");
+        room_list.classList.toggle("hide2");
+        // lines.classList.toggle("hide2");
+        lines.forEach(lines => {
+            lines.classList.toggle("hide2");
+        });
         checked = false;
     }
 })
@@ -51,6 +65,13 @@ mybookings.addEventListener("click", (event) => {
         form_heading.classList.toggle("hide2");
         event_section.classList.toggle("hide2");
         form_section.classList.toggle("hide2");
+        colored_section.classList.toggle("hide2");
+        gallery_section.classList.toggle("hide2");
+        room_list.classList.toggle("hide2");
+        // lines.classList.toggle("hide2");
+        lines.forEach(lines => {
+            lines.classList.toggle("hide2");
+        });  // lines.style.
         checked = true;
     }
 })
