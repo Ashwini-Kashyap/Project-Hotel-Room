@@ -4,30 +4,89 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- google font for chatbot -->
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+        <!-- bootstrap link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/2c0e1f0738.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style-bot.css">
         <title>Book Hotel</title>
     </head>
 
     <body>
-        <section class="hero-section">
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 " style="background-color: #04AA6D !important;">
+            <div class="container-fluid nav-container pos-abs" style="top: 10px;width:100%;">
+                <!-- <a class="navbar-brand" href="#">Hotels.com</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown" style="float: right;">
+                    <ul class="navbar-nav ms-auto" style="margin-left: auto;">
+                        <li class="nav-item me-3 ">
+                            <a class="nav-link set home" href="#hero-section">Home</a>
+                        </li>
+                        <li class="nav-item  me-3">
+                            <a class="nav-link set" href="#about-us">Features</a>
+                        </li>
+                        <li class="nav-item me-3 ">
+                            <a class="nav-link set list">My Bookings:</a>
+                        </li>
+
+                        <li class="nav-item set dropdown me-3">
+                            <a class="nav-link set dropdown-toggle" href="#room-type" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Rooms
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#room-type">Single</a></li>
+                                <li><a class="dropdown-item" href="#room-type">Family</a></li>
+                                <li><a class="dropdown-item" href="#room-type">Duplex</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link set" href="#contact-section">contact us</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link set" href="#about-us">Profile</a>
+                        </li>
+                        <li class="nav-item me-3"> <i class="fa-solid fa-user"
+                                style="border-radius: 50%; border: 2px solid;padding: 0.35rem;margin: 0; border-color:#e0d7d7a6 ;color: #e0d7d7a6;opacity: 0.75;"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero-section" id="hero-section">
             <div class="hero-text">
                 <h1>Welcome to paradise Hotel</h1>
                 <p style="margin: 10px;">We Provide rooms at a very good price along with great
                     amenities to make
                     your living experience
                     awesome</p>
-                <button class="book-button">Book</button>
+                <button class=" btn btn-success book-button">Book</button>
 
             </div>
         </section>
-        <h1 class="about-heading">About-us</h1>
+        <hr>
+        <h1 class="about-heading" id="about-us">About-us</h1>
         <section class="about-section">
-
-            <div class="about-us">
+            <div class="about-us ">
                 <p>
                     looking for a vacation to leave behind the hustle of everyday life and indulge in world-class
                     hospitality at exotic locations? Look no further than the leading & fastest growing hotel chain of
@@ -41,7 +100,7 @@
                 </div>
             </div>
             <!-- </div> -->
-            <div class="amenities">
+            <div class="amenities" id="Features">
                 <h2>Amenities we have: </h2>
                 <ul>
                     <li><i class="fa-solid fa-wifi"></i> High speed internet</li>
@@ -52,38 +111,177 @@
                 </ul>
             </div>
         </section>
-        <h1 class="room-heading">Room Types</h1>
+        <!-- <hr> -->
+        <section class="event">
+            <div class="container-fluid event-section">
+                <div class=" event-container p-1">
+                    *events
+                    <h3 style="color: white;  ">"Wedding Season"</h3>
+                    <p>Book your functions now:</p>
+                    <button class="btn btn-success  m-4 fs-4">Book Now</button>
+
+                </div>
+                <div class=" offers">
+                    <div class="wrapper">
+                        <div class="wapp1 w-50 ">
+                            *offers
+                            <h4 class="mt-2">Get free vouchers for upcoming events:</h4>
+                            <button class="btn btn-success m-5 fs-4">Book Now</button>
+                        </div>
+                        <div class="wapp2 w-50">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <hr>
+        <h1 class="room-heading" id="room-type">Room Types</h1>
         <section class="room-type-container">
             <div class="room-images">
-                <img src="singleRoom.jpg" class="hide" alt="singleRoom-photo">
-                <img src="newRoom.jpg" class="hide" alt="doubleRoom-photo">
-                <img src="room.jpg" alt="room-photo">
+                <div class="images"><img src="singleRoom.jpg" class="" alt="singleRoom-photo">
+                    <p>Single Room</p>
+                    <p class="price">Rs. 1000/-</p>
+                </div>
+                <div class="images"><img src="newRoom.jpg" class="" alt="doubleRoom-photo">
+                    <p>double Room</p>
+                    <p class="price">Rs. 1850/-</p>
+                </div>
+                <div class="images"><img src="room.jpg" alt="room-photo">
+                    <p>Duplex Room</p>
+                    <p class="price">Rs. 3500/-</p>
+                </div>
+
             </div>
-            <div class="room-list">
+        </section>
+        <section>
+            <div class="room-list  p-4 m-0" style="background-color: #04AA6D;">
                 <h4>Single occupancy Room</h4>
                 <p>A room assigned to one person. May have one or more beds.
-                    The room size on area of Single Rooms are generally between 37 m<sup>2</sup> to 45 m<sup>2</sup>.
+                    The room size on area of Single Rooms are generally between 37 m<sup>2</sup> to 45 m<sup>2</sup>. <a
+                        href="#"> more..</a>
                 </p>
                 <h4>Family Room</h4>
                 <p>A parlour of living room connected with to one or more bedrooms. (A room with one or more bedrooms
                     and a separete living space.)
-                    The room size or area of suite rooms are generally between 70 m<sup>2</sup> to 100 m<sup>2</sup>.
+                    The room size or area of suite rooms are generally between 70 m<sup>2</sup> to 100 m<sup>2</sup>. <a
+                        href="#"> more..</a>
                 </p>
                 <h4>Duplex Room</h4>
-                <p>The most expensive room provided by a hotel. usually, only one Suplex suite is available in one
-                    single hotel property. Similar to the normal suites, a Duplex suite always has one or more bedrooms
+                <p>The most expensive room provided by a hotel. Similar to the normal suites, a Duplex suite always has
+                    one or more bedrooms
                     and a living space with a strong emphasis on grand in-room decoration, high-quality amenities and
-                    supplies, and tailor-made services (eg. personal butler during the stay).</p>
+                    supplies, and tailor-made services (eg. personal butler during the stay). <a href="#"> more..</a>
+                </p>
             </div>
         </section>
-        <div class="help-button">
-            Need help?
+
+        <!-- chatbot -->
+        <button class="chatbot-toggler ">
+            <span class="material-symbols-rounded">mode_comment</span>
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="chatbot">
+            <header>
+                <h2>Chatbot</h2>
+                <span class="close-btn material-symbols-outlined">close</span>
+            </header>
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p>Hi there 👋<br>How can I help you today?</p>
+                </li>
+            </ul>
+            <div class="chat-input">
+                <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                <span id="send-btn" class="material-symbols-rounded">send</span>
+            </div>
         </div>
-        <h2 class="form-heading">
-            Fill the form for booking room
-        </h2>
-        <section class="form-container">
-            <form>
+
+        <!-- Testimonials -->
+
+        <section class="colored-section mb-4" id="testimonials">
+            <p class="ms-5  pt-2 mb-0 pb-0 ">Reviews and Testimonials:
+                <a class="float-end me-5 fe-5 " href="#">see more reviews...</a>
+            </p>
+            <!-- <hr class="mt-1"> -->
+            <div id="testimonial-carousel " class="carousel slide " data-bs-ride="carousel" data-bs-theme="dark">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonial-carousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <!-- <button type="button" data-bs-target="#testimonial-carousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button> -->
+                </div>
+                <div class="carousel-inner ">
+                    <div class="carousel-item active container-fluid" data-bs-interval="3000">
+
+                        <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+                        <em class="fs-4">Rahul, Mumbai</em>
+                        <h4 class="testimonial-text ">I have stayed at dozen of hotels in Roorkee. This was on the top
+                            of the list of best stays/experiences ever. Staff was very
+                            hospitable and there for every need of mine. Thank you so much.</h4>
+                    </div>
+                    <div class="carousel-item container-fluid" data-bs-interval="3000">
+
+                        <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+                        <em class="fs-4">Jasmine, Delhi</em>
+                        <h4 class="testimonial-text">This is the perfect hotel for a weekend getaway in Roorkee. The
+                            downtown area on Main Street is a best kept secret and the
+                            Hotel offers everything you need if you don’t feel like venturing out</h4>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel"
+                    data-bs-slide="prev">
+                    <span class=" carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class=" visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+
+        </section>
+        <hr class="pb-4">
+
+        <section class="gallery-section"
+            style="height: 300px; width: 100%; display: flex; justify-content: space-between;">
+            <div class="container " style="max-width: 30%;">
+                <iframe width="420" height="260" src="https://www.youtube.com/embed/4K6Sh1tsAW4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallary" style="height: 100%; width: 65%;">
+                <h4>Take a tour of our hotel</h4>
+                <h4 class="ms-5">or</h4>
+                <h4>Explore our gallery:-</h4>
+                <p>We frequently organise event on comming occasions and</p>
+                <p>Our hotel is highly demanded for wedding occasions. </p>
+                <img src="g1.jpeg" alt="images" class="img ist">
+                <img src="g4.jpeg" alt="images" class="img sec">
+                <img src="g3.jpg" alt="images" class="img third">
+                <img src="g2.jpeg" alt="images" class="img fourth">
+                <div class="img fifth"></div>
+                <h3 class=" sixth"><a class="link-dark" href="#">99+</a></h3>
+            </div>
+        </section>
+
+        <!-- form section -->
+
+        <h5 class="form-heading ps-3" id="contact-section">
+            Give us Feedback:
+            <!-- Fill the form for booking room: -->
+        </h5>
+        <!-- <hr class="m-0" style="color: #fff; opacity: 0.75;"> -->
+        <section class="form-container " style="display: flex; justify-content: space-between;">
+            <!-- <form class="booking-form">
                 <div class="form-group">
                     <label for="name">Your full name</label>
                     <input type="text" id="name" required>
@@ -108,8 +306,96 @@
                 <div class="form-group " style="text-align: center;">
                     <input class="submit-button" type="submit" value="Book">
                 </div>
-            </form>
+            </form> -->
+            <div class="comment-section ms-3 ">
+                <form id="usrform">
+                    <div style="display: flex;">
+                        <!-- <label for="usrname" style="display: inline;">Name</label> -->
+                        <span class="pt-3">Name:</span>
+                        <input type="text" name="usrname" id="usrname" class=" m-2">
+                    </div>
+                    <textarea style="border-radius:10px; " rows="6" cols="40" name="comment" form="usrform">
+
+                    </textarea>
+                    <input type="submit" class="btn btn-outline-light m-3 w-25">
+                </form>
+            </div>
+            <div class="address ">
+                <p>Visit us at:</p>
+                <h4>Motel Divine International, Roorkee</h4>
+                No.1, 48 opp. Bus Stand near IIT Gate, Civil Lines, Roorkee, Uttarakhand 247667
+                <p class="fs-6">contact us: mob. +917763016103. +913489973425</p>
+                <div class="container-fluid text-center">
+                    <i class="social-icon fab fa-facebook-f"></i>
+                    <i class="social-icon fab fa-twitter"></i>
+                    <i class="social-icon fab fa-instagram"></i>
+                    <i class="social-icon fas fa-envelope"></i>
+                    <p class="mt-1 pt-1 fs-6">© Copyright 2023 Ashwini</p>
+                </div>
+            </div>
+            <iframe class="me-5"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3099.9288426711664!2d77.89004059102521!3d29.86494975979065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb370994eca37%3A0x34e2592f943f3f51!2sMotel%20Divine%20International%2C%20Roorkee!5e0!3m2!1sen!2sin!4v1691659931771!5m2!1sen!2sin"
+                width="350" height="250" style="border:0; margin-bottom: 1rem;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
+
+
+        <section class="dashboard hide2">
+            <div class="greetings"> <i class="fa-solid fa-user"
+                    style="border-radius: 50%; border: 2px solid;padding: 0.35rem;margin: 0; border-color:#04AA6D ;color: #04AA6D;opacity: 0.75;"></i>
+                Welcome Ashwini Kumar!</div>
+            <div class="sidebar">
+                <a class="active" href="#booking-list">booking-List</a>
+                <a href="#">Services</a>
+                <a href="#">Past-Bookings</a>
+                <a href="#">contact-details</a>
+                <a href="#">Other Services</a>
+            </div>
+            <div class="booking-list">
+                <h3 class="ms-2 mt-4 mb-3">Your Bookings:</h3>
+                <br>
+                <!-- <div class="container text-center mt-5"> -->
+                <table class="table" style=" width: 95%; text-align: center; font-size: large;">
+                    <tr class="table-dark">
+                        <th>Booked for:</th>
+                        <th>Date from</th>
+                        <th>Date to</th>
+                        <th>Status</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Ashwini</td>
+                        <td>22/7/2023</td>
+                        <td>23/7/2023</td>
+                        <td>Pending</td>
+                        <td> <a href="#">link</a> </td>
+                    </tr>
+                    <tr>
+                        <td>Ashwini</td>
+                        <td>18/7/2023</td>
+                        <td>20/7/2023</td>
+                        <td>Pending</td>
+                        <td> <a href="#">link</a> </td>
+                    </tr>
+                </table>
+                <div class="error-container text-center mt-3 hide2">
+                    <h1>no bookings yet!</h1>
+                </div>
+                <button class="btn btn-success mt-5"
+                    style="position: relative; left: 50%; font-size: x-large; padding: 0.25rem 0.75rem;">Book</button>
+
+                <!-- </div> -->
+            </div>
+        </section>
+        <!-- <div class="line1">
+            <p>hi! What can i do for you!</p>
+            <a href="#">Book room</a>
+            <a href="#">Axcess Services</a>
+            <a href="#">Contact us</a>
+            <a href="#">FAQs</a>
+        </div> -->
+        <script src="script-bot.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </html>
